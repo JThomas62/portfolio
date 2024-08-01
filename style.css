@@ -12,8 +12,8 @@ body {
 /* Navbar Styling */
 
 .brand-title {
-  font-size: 25px;
-  margin: 24px 0 0 20px;
+  font-size: 1.5625rem;
+  margin: 1.5rem 0 0 1.25rem;
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Roboto Slab", serif;
@@ -30,7 +30,7 @@ body {
 
 .navbar-links {
   display: flex;
-  margin: 24px 20px 0 0;
+  margin: 1.5rem 1.25rem 0 0;
 }
 
 .navbar-links ul {
@@ -46,20 +46,20 @@ body {
 .navbar-links li a {
   position: relative;
   text-decoration: none;
-  margin: 0 20px 0 0;
+  margin: 0 1.25rem 0 0;
   display: block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .navbar-links li a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: -0.3125rem;
   width: 100%;
-  height: 4.5px;
+  height: 0.28125rem;
   background-color: #00FF00;
   transform: scaleX(0);
   transform-origin: left;
@@ -72,13 +72,13 @@ body {
 
 .toggle-button {
   position: absolute;
-  top: 12px;
-  right: 16px;
+  top: 0.75rem;
+  right: 1rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 21px;
+  width: 1.875rem;
+  height: 1.3125rem;
 }
 
 .toggle-button .bar {
@@ -92,22 +92,23 @@ body {
 /* Hero Section Styling */
 
 .home-section {
-  margin: 300px 0 420px 0;
+  margin: 18.75rem 0 26.25rem 0;
   text-align: center;
 }
 
 .name {
   color: #00ff00;
-  font-size: 80px;
+  font-size: 3.75rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  text-transform: uppercase;
 }
 
 .heading {
   color: white;
-  font-size: 70px;
+  font-size: 4.375rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -126,14 +127,14 @@ body {
   max-width: 15%;
   height: auto;
   border-radius: 10%;
-  margin: 0 35px 0 0;
+  margin: 0 2.1875rem 0 0;
   border: solid lime 5px;
 }
 
 .text {
   text-align: start;
   width: 60%;
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -141,13 +142,13 @@ body {
 }
 
 .about_me-1 {
-  margin: 0 0 15px 0;
+  margin: 0 0 0.9375rem 0;
 }
 
 /* Skills Section Styling */
 
 .skill-image {
-  margin: 300px 0;
+  margin: 18.75rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,13 +157,13 @@ body {
 .html-img, .css-img, .js-img, .react-img {
   width: 8%;
   height: auto;
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 
 /* Project Section Styling */
 
 .project-section {
-  margin: 0 0 300px 0;
+  margin: 0 0 18.75rem 0;
 }
 
 .project-container {
@@ -173,7 +174,7 @@ body {
 
 .project_img {
   max-width: 20%;
-  margin: 0 30px 0 250px;
+  margin: 0 1.875rem 0 15.625rem;
 }
 
 .project-details {
@@ -182,8 +183,8 @@ body {
 }
 
 .to-do_header {
-  line-height: 41px;
-  font-size: 40px;
+  line-height: 2.5625rem;
+  font-size: 2.5rem;
   margin: 0;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -195,14 +196,14 @@ body {
   width: 10%;
   border: none;
   border-top: 1px solid #FFFFFF;
-  margin: 5px 0 0 0;
+  margin: 0.3125rem 0 0 0;
 }
 
 .about_to-do {
-  margin: 25px 0 10px 0;
-  font-size: 20px;
+  margin: 1.5625rem 0 0.625rem 0;
+  font-size: 1.25rem;
   width: 75%;
-  line-height: 30px;
+  line-height: 1.875rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -211,24 +212,24 @@ body {
 
 .html-project, .css-project, .js-project {
   width: 6%;
-  margin: 5px 0 0 0;
+  margin: 0.3125rem 0 0 0;
 }
 
 .todo-project-links {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 0 10px;
+  margin: 1.25rem 0 0 0.625rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 25px;
+  font-size: 1.5625rem;
 }
 
 .todo-project-links a {
   text-decoration: none;
   color: inherit;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25rem 0;
 }
 
 .project-links a:hover {
@@ -254,16 +255,16 @@ body {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .contact-inputs {
-  width: 500px;
-  height: 40px;
-  padding-left: 8px;
+  width: 31.25rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
   border: none;
-  border-radius: 10px;
-  font-size: 16px;
+  border-radius: 0.625rem;
+  font-size: 1rem;
   color: #000000;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -273,12 +274,12 @@ body {
 
 .contact-message {
   resize: none;
-  height: 200px;
-  width: 500px;
-  border-radius: 10px;
-  padding: 8px;
+  height: 12.5rem;
+  width: 31.25rem;
+  border-radius: 0.625rem;
+  padding: 0.5rem;
   text-align: left;
-  font-size: 16px;
+  font-size: 1rem;
   color: #000000;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -287,12 +288,12 @@ body {
 }
 
 .contact_form-button {
-  width: 500px;
-  height: 35px;
-  font-size: 16px;
+  width: 31.25rem;
+  height: 2.1875rem;
+  font-size: 1rem;
   background-color: #00FF00;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: #000000;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -309,8 +310,8 @@ body {
 
 .footer-container {
   width: 100%;
-  padding: 10px 0 30px 0;
-  margin: 60px 0 0 0;
+  padding: 0.625rem 0 1.875rem 0;
+  margin: 3.75rem 0 0 0;
   background-color: #1f2525;
 }
 
@@ -321,15 +322,15 @@ body {
 
 .socialIcons a {
   text-decoration: none;
-  margin: 10px 0 0 0;
-  padding: 15px;
+  margin: 0.625rem 0.9375rem 0 0;
+  padding: 0.3125rem;
 }
 
 .socialIcons a i {
-  font-size: 35px;
+  font-size: 2.1875rem;
   opacity: 0.9;
   background-color: #3b4747;
-  padding: 15px;
+  padding: 0.9375rem;
   border-radius: 50%;
 }
 
@@ -338,7 +339,7 @@ body {
 }
 
 .footerNav {
-  margin: 15px 0 5px 0;
+  margin: 0.9375rem 0 0 0;
 }
 
 .footerNav ul {
@@ -352,10 +353,9 @@ body {
 }
 
 .footerNav ul li a {
-  margin: 0 15px 0 0;
+  margin: 0 1.25rem 0 0;
   text-decoration: none;
-  font-size: 18px;
-  letter-spacing: 3px;
+  font-size: 1.25rem;
 }
 
 .footerNav a:hover {

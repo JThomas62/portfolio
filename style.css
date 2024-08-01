@@ -2,10 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
   color: white;
 }
 
@@ -16,11 +12,14 @@ body {
 /* Navbar Styling */
 
 .brand-title {
-  font-size: 28.8px;
-  margin: 24px 0 0 48px;
+  font-size: 1.5625rem;
+  margin: 24px 0 0 20px;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 3px;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; 
 }
 
 .navbar {
@@ -31,6 +30,7 @@ body {
 
 .navbar-links {
   display: flex;
+  margin: 24px 20px 0 0;
 }
 
 .navbar-links ul {
@@ -46,11 +46,11 @@ body {
 .navbar-links li a {
   position: relative;
   text-decoration: none;
-  margin: 24px 48px 8px 16px;
+  margin: 0 20px 0 0;
   display: block;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 17px;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
 }
 
 .navbar-links li a::after {
@@ -92,14 +92,27 @@ body {
 /* Hero Section Styling */
 
 .home-section {
-  margin: 352px 0 370px 0;
-  font-size: 48px;
+  margin: 300px 0 420px 0;
   text-align: center;
-  letter-spacing: 3px;
 }
 
 .name {
   color: #00ff00;
+  font-size: 3.75rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.heading {
+  color: white;
+  font-size: 4.375rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* About Section Styling */
@@ -111,28 +124,31 @@ body {
 }
 
 .image {
-  max-width: 18%;
+  max-width: 15%;
   height: auto;
   border-radius: 10%;
   margin: 0 35px 0 0;
+  border: solid lime 5px;
 }
 
 .text {
   text-align: start;
   width: 60%;
-  line-height: 30px;
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-size: 1.5625rem;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .about_me-1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
 }
 
 /* Skills Section Styling */
 
 .skill-image {
-  margin: 100px 0;
+  margin: 300px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,7 +163,7 @@ body {
 /* Project Section Styling */
 
 .project-section {
-  margin: 0 0 100px 0;
+  margin: 0 0 300px 0;
 }
 
 .project-container {
@@ -168,9 +184,12 @@ body {
 
 .to-do_header {
   line-height: 41px;
-  font-size: 40px;
+  font-size: 2.5rem;
   margin: 0;
-  letter-spacing: 3px;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .separator {
@@ -182,25 +201,32 @@ body {
 
 .about_to-do {
   margin: 25px 0 10px 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 75%;
   line-height: 30px;
-  letter-spacing: 3px;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .html-project, .css-project, .js-project {
   width: 6%;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
-.project-links {
+.todo-project-links {
   display: flex;
   flex-direction: column;
   margin: 20px 0 0 10px;
-  letter-spacing: 3px;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5625rem;
 }
 
-.project-links a {
+.todo-project-links a {
   text-decoration: none;
   color: inherit;
   margin: 0 0 20px 0;
@@ -208,18 +234,6 @@ body {
 
 .project-links a:hover {
   color: #00FF00;
-}
-
-.to-do_demo {
-  text-decoration: none;
-  display: inline-block;
-  font-size: 23px;
-}
-
-.to-do_github {
-  text-decoration: none;
-  display: inline-block;
-  font-size: 23px;
 }
 
 .to-do_demo:hover {
@@ -249,30 +263,42 @@ body {
   height: 40px;
   padding-left: 8px;
   border: none;
-  border-radius: 20px;
-  font-size: 17px;
+  border-radius: 10px;
+  font-size: 1rem;
   color: #000000;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .contact-message {
   resize: none;
   height: 200px;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 8px;
   text-align: left;
-  font-size: 17px;
+  font-size: 1rem;
   color: #000000;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .contact_form-button {
   width: 500px;
   height: 35px;
-  font-size: 18px;
+  font-size: 1rem;
   background-color: #00FF00;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   color: #000000;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .contact_form-button:hover {
@@ -296,8 +322,8 @@ body {
 
 .socialIcons a {
   text-decoration: none;
-  margin: 10px 0 0 0;
-  padding: 15px;
+  margin: 10px 15px 0 0;
+  padding: 5px;
 }
 
 .socialIcons a i {
@@ -313,20 +339,23 @@ body {
 }
 
 .footerNav {
-  margin: 15px 0 15px 0;
+  margin: 15px 0 0 0;
 }
 
 .footerNav ul {
   display: flex;
   justify-content: center;
   list-style-type: none;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .footerNav ul li a {
-  margin: 0 15px 0 0;
+  margin: 0 20px 0 0;
   text-decoration: none;
-  font-size: 20px;
-  letter-spacing: 3px;
+  font-size: 1.25rem;
 }
 
 .footerNav a:hover {
@@ -375,81 +404,52 @@ body {
   }
 
   .home-section {
-    margin: 200px 0 330px 0;
-    font-size: 20px;
+    margin: 200px 0 220px 0;
   }
 
-  .about-container {
-    flex-direction: column;
-    align-items: center;
+  .name {
+    font-size: 35px;
+  }
+
+  .heading {
+    font-size: 40px;
   }
 
   .image {
-    max-width: 35%;
-    margin: 0 0 20px 0;
+    max-width: 25%;
   }
 
   .text {
-    width: 75%;
-    text-align: center;
+    width: 70%;
     font-size: 20px;
-  }
-
-  .skill-image {
-    margin: 70px 0 150px 0;
-    flex-wrap: wrap;
-  }
-
-  .html-img, .css-img, .js-img, .react-img {
-    width: 20%;
-    margin: 3px;
   }
 
   .project-container {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .project_img {
-    max-width: 55%;
-    margin: 0 0 15px 0;
-  }
-
-  .separator {
-    align-items: center;
-    margin: 0 auto;
-    width: 40%;
+    max-width: 80%;
+    margin: 50px 0 50px 0;
   }
 
   .project-details {
-    width: 80%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+  }
+
+  .to-do_header {
     text-align: center;
   }
 
+  .separator {
+    width: 80%;
+  }
+
   .about_to-do {
-    margin: 25px 0 0 0;
-  }
-
-  .html-project, .css-project, .js-project {
-    width: 20%;
-    margin: 20px 0;
-  }
-
-  .project-links {
-    margin: 10px 0;
-    width: 100%;
-  }
-
-  .to-do_demo, .to-do_github {
-    margin: 0;
-    width: 100%;
-    font-size: 20px;
-  }
-
-  .socialIcons a i {
-    font-size: 25px;
+    text-align: center;
+    width: 90%;
   }
 
   .contact-container {
@@ -457,27 +457,18 @@ body {
   }
 
   .contact-form {
-    width: 80%;
+    align-items: center;
   }
 
-  .contact-inputs, .contact-message, .contact_form-button {
-    width: 100%;
+  .contact-inputs {
+    width: 90%;
   }
 
-  .footer-container {
-    text-align: center;
+  .contact-message {
+    width: 90%;
   }
 
-  .socialIcons {
-    margin-bottom: 20px;
-  }
-
-  .footerNav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footerNav ul li {
-    margin: 10px;
+  .contact_form-button {
+    width: 90%;
   }
 }

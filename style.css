@@ -12,7 +12,7 @@ body {
 /* Navbar Styling */
 
 .brand-title {
-  font-size: 1.5625rem;
+  font-size: 1.56rem;
   margin: 24px 0 0 20px;
   text-transform: uppercase;
   text-decoration: none;
@@ -128,26 +128,25 @@ body {
   height: auto;
   border-radius: 10%;
   margin: 0 35px 0 0;
-  border: solid lime 5px;
 }
 
-.text {
+.about-me_container {
   text-align: start;
-  width: 60%;
-  font-size: 1.5625rem;
+  width: 65%;
+  font-size: 1.5rem;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
 }
 
-.about_me-1 {
+.about_me {
   margin: 0 0 15px 0;
 }
 
 /* Skills Section Styling */
 
-.skill-image {
+.skill-container {
   margin: 300px 0;
   display: flex;
   justify-content: center;
@@ -173,7 +172,7 @@ body {
 }
 
 .project_img {
-  max-width: 20%;
+  width: 20%;
   margin: 0 30px 0 250px;
 }
 
@@ -193,7 +192,7 @@ body {
 }
 
 .separator {
-  width: 10%;
+  width: 15%;
   border: none;
   border-top: 1px solid #FFFFFF;
   margin: 5px 0 0 0;
@@ -202,7 +201,7 @@ body {
 .about_to-do {
   margin: 25px 0 10px 0;
   font-size: 1.25rem;
-  width: 75%;
+  width: 65%;
   line-height: 30px;
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -211,7 +210,7 @@ body {
 }
 
 .html-project, .css-project, .js-project {
-  width: 6%;
+  width: 8%;
   margin: 5px 0 0 0;
 }
 
@@ -364,7 +363,7 @@ body {
 
 /* Mobile Styling */
 
-@media (max-width: 768px) {
+@media (width < 1000px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -399,7 +398,7 @@ body {
   }
 
   .brand-title {
-    font-size: 25px;
+    font-size: 1.5rem;
     margin: 10px 0 10px 10px;
   }
 
@@ -408,20 +407,33 @@ body {
   }
 
   .name {
-    font-size: 35px;
+    font-size: 2rem;
   }
 
   .heading {
-    font-size: 40px;
+    font-size: 3rem;
   }
 
+  .about-container {
+    flex-direction: column;
+  }
+  
   .image {
     max-width: 25%;
   }
 
-  .text {
-    width: 70%;
-    font-size: 20px;
+  .about_me {
+    font-size: 1.3rem;
+    margin: 25px 0 0 0;
+  }
+
+  .skill-container {
+    flex-direction: column;
+    margin: 100px 0 200px 0;
+  }
+
+  .html-img, .css-img, .js-img, .react-img {
+    width: 12%;
   }
 
   .project-container {
@@ -429,8 +441,15 @@ body {
   }
 
   .project_img {
-    max-width: 80%;
-    margin: 50px 0 50px 0;
+    width: 30%;
+  }
+
+  .to-do_header {
+    text-align: center;
+  }
+
+  .separator {
+    width: 12%;
   }
 
   .project-details {
@@ -439,36 +458,16 @@ body {
     align-items: center;
   }
 
-  .to-do_header {
-    text-align: center;
-  }
-
-  .separator {
-    width: 80%;
+  .html-project, .css-project, .js-project {
+    width: 15%;
+    margin: 10px 0 10px 0;
   }
 
   .about_to-do {
     text-align: center;
-    width: 90%;
   }
 
   .contact-container {
     flex-direction: column;
-  }
-
-  .contact-form {
-    align-items: center;
-  }
-
-  .contact-inputs {
-    width: 90%;
-  }
-
-  .contact-message {
-    width: 90%;
-  }
-
-  .contact_form-button {
-    width: 90%;
   }
 }

@@ -101,18 +101,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
-.image {
-  height: auto;
+.headshot {
+  max-width: 30%;
   border-radius: 15%;
 }
 
 .about-me_container {
-  text-align: start;
   width: 60%;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }
 
 .skill-container {
@@ -141,17 +141,20 @@ body {
 
 .project-section {
   margin: 300px 0 550px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 
 .project_img {
-  width: 18%;
+  max-width: 30%;
 }
 
 .project-details {
@@ -163,18 +166,16 @@ body {
 }
 
 .to-do_header {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 2rem;
 }
 
 .about_to-do {
   margin: 0 0 0 0;
   font-size: 1.4rem;
-  font-weight: 300;
 }
 
 .html-project, .css-project, .js-project {
-  width: 15%;
+  max-width: 15%;
   margin: 8px 0 0 0;
 }
 
@@ -254,11 +255,11 @@ body {
 .socialIcons {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
 .socialIcons a {
   text-decoration: none;
-  margin: 10px 15px 0 0;
   padding: 5px;
 }
 
@@ -282,10 +283,10 @@ body {
   display: flex;
   justify-content: center;
   list-style-type: none;
+  gap: 15px;
 }
 
 .footerNav ul li a {
-  margin: 0 20px 0 0;
   text-decoration: none;
   font-size: 1.25rem;
 }
@@ -294,12 +295,12 @@ body {
   color: #00FF00;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: #3b4747;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
   }
 
   .toggle-button {
@@ -331,27 +332,27 @@ body {
 
   .brand-title {
     font-size: 1.5rem;
-    margin: 5px 0 5px 20px;
+    margin: 8px 0 0 10px;
   }
 
   .home-section {
-    margin: 200px 0 220px 0;
+    margin: 200px 0 370px 0;
   }
 
   .name, .heading {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .about-container {
     flex-direction: column;
   }
 
-  .image {
-    max-width: 30%;
+  .headshot {
+    max-width: 50%;
   }
 
   .about-me_container {
-    width: 70%;
+    width: 80%;
   }
 
   .skills-icons {
@@ -369,12 +370,13 @@ body {
   }
 
   .project_img {
-    width: 50%;
+    max-width: 45%;
   }
 
   .project-details {
     width: 100%;
-    padding: 0 10px;
+    align-items: center;
+    text-align: center;
   }
 
   .to-do_header {
@@ -383,25 +385,25 @@ body {
 
   .about_to-do {
     width: 90%;
-    margin: 0;
   }
 
   .html-project, .css-project, .js-project {
-    width: 10%;
+    max-width: 15%;
   }
 
   .contact-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .contact-inputs, .contact-message, .contact_form-button {
-    width: 90%;
-    max-width: 500px;
+    max-width: 90%;
+    margin: 0 auto;
   }
 
   .socialIcons a i {
     padding: 12px;
-    font-size: 30px;
+    font-size: 2rem;
   }
 }

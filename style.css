@@ -105,7 +105,9 @@ body {
 }
 
 .headshot {
-  max-width: 30%;
+  width: 100%;
+  max-width: 20%;
+  height: auto;
   border-radius: 15%;
 }
 
@@ -154,7 +156,9 @@ body {
 }
 
 .project_img {
-  max-width: 30%;
+  width: 100%;
+  max-width: 25%;
+  height: auto;
 }
 
 .project-details {
@@ -170,13 +174,13 @@ body {
 }
 
 .about_to-do {
-  margin: 0 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 1.4rem;
 }
 
 .html-project, .css-project, .js-project {
   max-width: 15%;
-  margin: 8px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 .todo-project-links {
@@ -348,11 +352,12 @@ body {
   }
 
   .headshot {
-    max-width: 50%;
+    max-width: 30%;
   }
 
   .about-me_container {
-    width: 80%;
+    width: 65%;
+    text-align: center;
   }
 
   .skills-icons {
@@ -374,7 +379,7 @@ body {
   }
 
   .project-details {
-    width: 100%;
+    width: 70%;
     align-items: center;
     text-align: center;
   }
@@ -398,7 +403,7 @@ body {
   }
 
   .contact-inputs, .contact-message, .contact_form-button {
-    max-width: 90%;
+    max-width: 70%;
     margin: 0 auto;
   }
 

@@ -105,7 +105,13 @@ body {
 }
 
 .headshot {
+<<<<<<< HEAD
   max-width: 30%;
+=======
+  width: 100%;
+  max-width: 20%;
+  height: auto;
+>>>>>>> wip
   border-radius: 15%;
 }
 
@@ -154,7 +160,13 @@ body {
 }
 
 .project_img {
+<<<<<<< HEAD
   max-width: 30%;
+=======
+  width: 100%;
+  max-width: 25%;
+  height: auto;
+>>>>>>> wip
 }
 
 .project-details {
@@ -170,13 +182,21 @@ body {
 }
 
 .about_to-do {
+<<<<<<< HEAD
   margin: 0 0 0 0;
+=======
+  margin: 5px 0 0 0;
+>>>>>>> wip
   font-size: 1.4rem;
 }
 
 .html-project, .css-project, .js-project {
   max-width: 15%;
+<<<<<<< HEAD
   margin: 8px 0 0 0;
+=======
+  margin: 10px 0 0 0;
+>>>>>>> wip
 }
 
 .todo-project-links {
@@ -348,11 +368,20 @@ body {
   }
 
   .headshot {
+<<<<<<< HEAD
     max-width: 50%;
   }
 
   .about-me_container {
     width: 80%;
+=======
+    max-width: 30%;
+  }
+
+  .about-me_container {
+    width: 65%;
+    text-align: center;
+>>>>>>> wip
   }
 
   .skills-icons {
@@ -374,7 +403,11 @@ body {
   }
 
   .project-details {
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 70%;
+>>>>>>> wip
     align-items: center;
     text-align: center;
   }
@@ -398,7 +431,11 @@ body {
   }
 
   .contact-inputs, .contact-message, .contact_form-button {
+<<<<<<< HEAD
     max-width: 90%;
+=======
+    max-width: 70%;
+>>>>>>> wip
     margin: 0 auto;
   }
 

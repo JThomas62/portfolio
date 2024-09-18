@@ -345,7 +345,7 @@ body {
   }
 
   .home-section {
-    margin: 200px 0 370px 0;
+    margin: 150px 0 300px 0;
   }
 
   .name, .heading {
@@ -354,15 +354,18 @@ body {
 
   .about-container {
     flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
 
   .headshot {
-    max-width: 30%;
+    max-width: 50%;
   }
 
   .about-me_container {
-    width: 65%;
+    width: 90%;
     text-align: center;
+    margin-top: 20px;
   }
 
   .skills-icons {
@@ -372,21 +375,23 @@ body {
   }
 
   .skill-icon {
-    width: 20%;
+    width: 25%;
   }
 
   .project-container {
     flex-direction: column;
+    padding: 20px;
   }
 
   .project_img {
-    max-width: 45%;
+    max-width: 60%;
   }
 
   .project-details {
-    width: 70%;
+    width: 90%;
     align-items: center;
     text-align: center;
+    margin-top: 10px;
   }
 
   .to-do_header {
@@ -398,17 +403,18 @@ body {
   }
 
   .html-project, .css-project, .js-project {
-    max-width: 15%;
+    max-width: 25%;
   }
 
   .contact-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
   }
 
   .contact-inputs, .contact-message, .contact_form-button {
-    max-width: 70%;
+    max-width: 90%;
     margin: 0 auto;
   }
 

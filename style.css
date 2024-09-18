@@ -419,10 +419,10 @@ body {
   }
 
   .socialIcons a i {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
-  .footerNav a {
+  .footerNav ul li a {
     font-size: 1rem;
   }
 }

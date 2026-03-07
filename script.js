@@ -1,60 +1,56 @@
-// Smooth Scroll for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId !== '#') {
-          document.querySelector(targetId).scrollIntoView({
-              behavior: 'smooth'
-          });
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+const closeBtn = document.getElementById("close-status");
+
+// 1. Mobile Navigation Toggle
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  });
+}
+
+// 2. Contact Form with Web3Forms (Async/Await)
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById("submit-btn");
+    const formData = new FormData(contactForm);
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        formStatus.classList.remove("hidden");
+        contactForm.reset();
+      } else {
+        alert("Submission Error: " + data.message);
       }
-  });
-});
-
-// Hamburger Menu Toggle
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
-const navbarLinks = document.getElementsByClassName('navbar-links')[0];
-
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
-});
-
-// Contact Form Submission
-const form = document.getElementById('form');
-const result = document.getElementById('result');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
-
-  fetch('https://api.web3forms.com/submit', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
-    body: json
-  })
-  .then(async (response) => {
-    let json = await response.json();
-    if (response.status === 200) {
-      result.innerHTML = "Form submitted successfully";
-    } else {
-      console.log(response);
-      result.innerHTML = json.message;
+    } catch (error) {
+      alert("Network error. Please check your internet connection.");
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
     }
-  })
-  .catch(error => {
-    console.log(error);
-    result.innerHTML = "Something went wrong!";
-  })
-  .then(() => {
-    form.reset();
-    setTimeout(() => {
-      result.style.display = "none";
-    }, 3000);
   });
-});
+}
+
+// 3. Close Success Modal
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    formStatus.classList.add("hidden");
+  });
+}

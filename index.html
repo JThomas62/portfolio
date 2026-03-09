@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacob Thomas</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <header>
     <nav class="navbar" aria-label="Primary">
-      <h1 class="logo">
-        <a href="/">Jacob Thomas</a>
-      </h1>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+      <div class="logo">
+        <a href="/">Jacob Thomas</a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Toggle navigation</span>
         <span></span>
         <span></span>
@@ -27,158 +30,148 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-role">
-      <h1>Fullstack Developer</h1>
-      <div class="location">
-        <p>Cana, VA</p>
+    <div class="container hero-grid">
+
+      <div class="hero-left">
+
+        <h1>Fullstack Developer</h1>
+
+        <p class="location">Cana, VA</p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Hire Me</a>
+          <a href="/resume.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="#"><img src="images/github.png" alt="GitHub"></a>
+          <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        </div>
+
       </div>
 
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">Hire Me</a>
-        <a href="/resume.pdf" target="_blank" class="btn btn-secondary">Resume</a>
-      </div>
-
-      <div class="hero-socials">
-        <a href="#"><img src="images/github.png" alt="GitHub" /></a>
-        <a href="#"><img src="images/linkedin.png" alt="LinkedIn" /></a>
-      </div>
-    </div>
-    <div class="hero-text">
-      <p>
-        Full-Stack Developer specializing in building seamless, data-driven
-        applications with React, Node.js, and PostgreSQL. I focus on
-        architecting robust APIs and clean user interfaces that bridge the gap
-        between complex logic and intuitive design.
+      <p class="hero-text">
+        Specializing in the PERN stack, I build scalable web applications with a focus on clean code and efficient
+        database management. I help clients turn complex ideas into functional, high-performance digital solutions that
+        grow with their business.
       </p>
+
     </div>
   </section>
 
-  <section class="about">
-    <div class="about-content">
+  <section class="about" id="about">
+    <div class="container">
+
       <div class="about-main">
-        <img src="images/headshot.jpg" alt="Profile" class="headshot-img" />
+
+        <img src="images/headshot.jpg" alt="Profile photo of Jacob Thomas" class="headshot-img">
+
         <div class="about-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nam
-            quibusdam modi ad tenetur labore maxime, eveniet vero
-            perspiciatis. Veniam, dolor! Delectus, accusantium dolorum
-            similique, at obcaecati amet iste molestiae ducimus deserunt,
-            voluptas eos voluptates animi assumenda neque quaerat velit
-            praesentium. Blanditiis et cupiditate illum vero necessitatibus,
-            beatae laudantium debitis ab tempora dolore! Tempore provident
-            assumenda explicabo ullam deleniti expedita.
+            My interest in development began as a curiosity that quickly grew into a career path. Since then, I’ve been
+            on a mission to bridge the gap between powerful backend logic and clean, intuitive design. I believe
+            software should be easy to navigate, so I focus on optimizing user experiences to ensure every project is as
+            functional as it is accessible.
+          </p>
+          <p>
+            When I’m not behind the screen, I’m usually following all forms of motorsports. I also enjoy the technical
+            side of 3D design, engineering custom parts and bringing my own designs to life through 3D printing.
           </p>
         </div>
+
       </div>
 
       <div class="tech-stack">
+
         <div class="stack-group">
           <h3>Frontend</h3>
           <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/html.png" alt="HTML" />
-              <span>HTML</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/css.png" alt="CSS" />
-              <span>CSS</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/javascript.png" alt="JS" />
-              <span>JavaScript</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/react.png" alt="React" />
-              <span>React</span>
-            </div>
+            <div class="icon-item"><img src="images/html.png" alt="HTML"><span>HTML</span></div>
+            <div class="icon-item"><img src="images/css.png" alt="CSS"><span>CSS</span></div>
+            <div class="icon-item"><img src="images/javascript.png" alt="JavaScript"><span>JavaScript</span></div>
+            <div class="icon-item"><img src="images/react.png" alt="React"><span>React</span></div>
           </div>
         </div>
 
         <div class="stack-group">
           <h3>Backend</h3>
           <div class="icon-grid">
-            <div class="icon-item">
-              <img src="images/nodejs.png" alt="Node" />
-              <span>Node.js</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/express.png" alt="Express" />
-              <span>Express</span>
-            </div>
-            <div class="icon-item">
-              <img src="images/postgresql.png" alt="Postgres" />
-              <span>PostgreSQL</span>
-            </div>
+            <div class="icon-item"><img src="images/nodejs.png" alt="Node.js"><span>Node.js</span></div>
+            <div class="icon-item"><img src="images/express.png" alt="Express"><span>Express</span></div>
+            <div class="icon-item"><img src="images/postgresql.png" alt="PostgreSQL"><span>PostgreSQL</span></div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="projects container" id="projects">
+    <article class="project-card">
+      <img src="images/test.jpg" alt="Project preview">
+      <div class="card-container">
+        <h4>Project Title</h4>
+        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">GitHub</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="images/test.jpg" alt="Project preview">
+      <div class="card-container">
+        <h4>Project Title</h4>
+        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">GitHub</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="images/test.jpg" alt="Project preview">
+      <div class="card-container">
+        <h4>Project Title</h4>
+        <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="project-links">
+          <a href="#" class="btn btn-secondary">GitHub</a>
+          <a href="#" class="btn btn-primary">Demo</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <form id="contact-form">
+        <input type="hidden" name="access_key" id="access_key">
+
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Your Message" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary">Send</button>
+      </form>
+
+      <div id="form-status" class="modal-overlay">
+        <div class="status-content">
+          <p>✅ Message sent successfully!</p>
+          <button type="button" id="close-status" class="btn btn-secondary">Close</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="projects">
-    <div class="project-card">
-  <img src="images/test.jpg" alt="Project preview">
-  <div class="card-container">
-    <h4>Project Title</h4>
-    <p class="project-description">Short description of your amazing work.</p>
-    
-    <div class="project-links">
-      <a href="#" class="github-link">View Code on GitHub</a>
-      <a href="#" class="btn btn-primary">Live Demo</a>
-    </div>
-  </div>
-</div>
-
-    <div class="project-card">
-  <img src="images/test.jpg" alt="Project preview">
-  <div class="card-container">
-    <h4>Project Title</h4>
-    <p class="project-description">Short description of your amazing work.</p>
-    
-    <div class="project-links">
-      <a href="#" class="github-link">View Code on GitHub</a>
-      <a href="#" class="btn btn-primary">Live Demo</a>
-    </div>
-  </div>
-</div>
-
-    <div class="project-card">
-  <img src="images/test.jpg" alt="Project preview">
-  <div class="card-container">
-    <h4>Project Title</h4>
-    <p class="project-description">Short description of your amazing work.</p>
-    
-    <div class="project-links">
-      <a href="#" class="github-link">View Code on GitHub</a>
-      <a href="#" class="btn btn-primary">Live Demo</a>
-    </div>
-  </div>
-</div>
-
-  <section class="contact" id="contact">
-    <form id="contact-form">
-      <input type="hidden" name="access_key" value="893cecc2-c69f-4342-9446-6b24e2adf98e">
-
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="subject" placeholder="Subject" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-
-      <button type="submit" id="submit-btn" class="btn btn-primary">Send Message</button>
-    </form>
-
-    <div id="form-status" class="form-status hidden">
-      <div class="status-content">
-        <p>✅ Message sent successfully!</p>
-        <button type="button" id="close-status" class="btn btn-secondary">Close</button>
-      </div>
-    </div>
-  </section>
-
-  <script src="script.js"></script>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>

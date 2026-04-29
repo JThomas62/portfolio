@@ -1,7 +1,6 @@
 const form = document.getElementById('contact-form');
 const result = document.getElementById('form-status');
 
-// Just use the variable, don't declare it with 'const' again!
 document.getElementById('access_key').value = myAccessKey; 
 
 form.addEventListener('submit', function(e) {

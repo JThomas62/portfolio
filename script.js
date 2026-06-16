@@ -1,8 +1,14 @@
 const form = document.getElementById('contact-form');
 const result = document.getElementById('form-status');
 
-// Web3Forms Setup
-document.getElementById('access_key').value = myAccessKey; 
+// ==========================================
+// Web3Forms Setup & Key Fallback
+// ==========================================
+if (typeof myAccessKey !== 'undefined') {
+  document.getElementById('access_key').value = myAccessKey;
+} else {
+  document.getElementById('access_key').value = 'YOUR_ACTUAL_WEB3FORMS_ACCESS_KEY_HERE';
+}
 
 // ==========================================
 // Contact Form Submission Logic

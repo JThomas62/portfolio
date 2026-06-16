@@ -1,34 +1,18 @@
-// Smooth Scroll for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      if (targetId !== '#') {
-          document.querySelector(targetId).scrollIntoView({
-              behavior: 'smooth'
-          });
-      }
-  });
-});
+const form = document.getElementById('contact-form');
+const result = document.getElementById('form-status');
 
-// Hamburger Menu Toggle
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
-const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+// Web3Forms Setup
+document.getElementById('access_key').value = myAccessKey; 
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active');
-});
-
-// Contact Form Submission
-const form = document.getElementById('form');
-const result = document.getElementById('result');
-
+// ==========================================
+// Contact Form Submission Logic
+// ==========================================
 form.addEventListener('submit', function(e) {
   e.preventDefault();
+  
   const formData = new FormData(form);
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
-  result.innerHTML = "Please wait...";
 
   fetch('https://api.web3forms.com/submit', {
     method: 'POST',
@@ -39,22 +23,40 @@ form.addEventListener('submit', function(e) {
     body: json
   })
   .then(async (response) => {
-    let json = await response.json();
-    if (response.status === 200) {
-      result.innerHTML = "Form submitted successfully";
+    if (response.status == 200) {
+      result.classList.add('active');
     } else {
-      console.log(response);
-      result.innerHTML = json.message;
+      console.error("Server response:", response);
+      alert("Submission failed. Check your API key.");
     }
   })
   .catch(error => {
-    console.log(error);
-    result.innerHTML = "Something went wrong!";
+    console.error("Fetch error:", error);
   })
   .then(() => {
     form.reset();
-    setTimeout(() => {
-      result.style.display = "none";
-    }, 3000);
+  });
+});
+
+// Close Success Modal Button
+document.getElementById('close-status').addEventListener('click', function() {
+  result.classList.remove('active');
+});
+
+// ==========================================
+// Mobile Hamburger Menu Logic
+// ==========================================
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Toggle menu on click
+menuToggle.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+});
+
+// Close the menu automatically when any navigation link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.classList.remove('active');
   });
 });

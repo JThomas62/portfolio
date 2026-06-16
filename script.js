@@ -4,8 +4,17 @@ const result = document.getElementById('form-status');
 // ==========================================
 // Web3Forms Setup & Key Fallback
 // ==========================================
-const accessKey = (typeof myAccessKey !== 'undefined') ? myAccessKey : 'd7e69e3b-26bf-4c9e-92ca-a4f2b6e8408c';
-document.getElementById('access_key').value = accessKey;
+async function initializeForm() {
+  // If running on Cloudflare, it will have an environment variable injected
+  // Otherwise, fetch the local config.json
+  try {
+    const response = await fetch('config.json');
+    const config = await response.json();
+    document.getElementById('access_key').value = config.access_key;
+  } catch (err) {
+    console.warn("Falling back to environment/hardcoded key");
+  }
+}
 
 // ==========================================
 // Contact Form Submission Logic

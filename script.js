@@ -4,11 +4,8 @@ const result = document.getElementById('form-status');
 // ==========================================
 // Web3Forms Setup & Key Fallback
 // ==========================================
-if (typeof myAccessKey !== 'undefined') {
-  document.getElementById('access_key').value = myAccessKey;
-} else {
-  document.getElementById('access_key').value = 'YOUR_ACTUAL_WEB3FORMS_ACCESS_KEY_HERE';
-}
+const accessKey = (typeof myAccessKey !== 'undefined') ? myAccessKey : 'd7e69e3b-26bf-4c9e-92ca-a4f2b6e8408c';
+document.getElementById('access_key').value = accessKey;
 
 // ==========================================
 // Contact Form Submission Logic

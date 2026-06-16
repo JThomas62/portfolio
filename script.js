@@ -10,7 +10,7 @@ form.addEventListener('submit', function(e) {
   const json = JSON.stringify(Object.fromEntries(formData));
 
   // Update this URL to exactly match your Worker's URL
-  fetch('https://portfolio.jacobt257-4b9.workers.dev/', { 
+  fetch('https://form-proxy.jacobt257-4b9.workers.dev', { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: json

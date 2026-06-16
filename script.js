@@ -9,8 +9,8 @@ form.addEventListener('submit', function(e) {
   const formData = new FormData(form);
   const json = JSON.stringify(Object.fromEntries(formData));
 
-  // Update this URL to exactly match your Worker's URL
-  fetch('https://form-proxy.jacobt257-4b9.workers.dev', { 
+  // Your secure worker proxy URL
+  fetch('https://form-proxy.jacobt257-4b9.workers.dev/', { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: json
@@ -31,6 +31,10 @@ form.addEventListener('submit', function(e) {
 // ==========================================
 document.getElementById('close-status').addEventListener('click', function() {
   result.classList.remove('active');
+  
+  // This line removes focus from the button after clicking,
+  // which prevents the 'aria-hidden' warning in your console.
+  this.blur(); 
 });
 
 // ==========================================

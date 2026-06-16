@@ -1,8 +1,12 @@
 const form = document.getElementById('contact-form');
 const result = document.getElementById('form-status');
 
+// Web3Forms Setup
 document.getElementById('access_key').value = myAccessKey; 
 
+// ==========================================
+// Contact Form Submission Logic
+// ==========================================
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -34,7 +38,25 @@ form.addEventListener('submit', function(e) {
   });
 });
 
-// Close button logic
+// Close Success Modal Button
 document.getElementById('close-status').addEventListener('click', function() {
-    result.classList.remove('active');
+  result.classList.remove('active');
+});
+
+// ==========================================
+// Mobile Hamburger Menu Logic
+// ==========================================
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+// Toggle menu on click
+menuToggle.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+});
+
+// Close the menu automatically when any navigation link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function() {
+    navLinks.classList.remove('active');
+  });
 });

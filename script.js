@@ -2,22 +2,7 @@ const form = document.getElementById('contact-form');
 const result = document.getElementById('form-status');
 
 // ==========================================
-// Web3Forms Setup & Key Fallback
-// ==========================================
-async function initializeForm() {
-  // If running on Cloudflare, it will have an environment variable injected
-  // Otherwise, fetch the local config.json
-  try {
-    const response = await fetch('config.json');
-    const config = await response.json();
-    document.getElementById('access_key').value = config.access_key;
-  } catch (err) {
-    console.warn("Falling back to environment/hardcoded key");
-  }
-}
-
-// ==========================================
-// Contact Form Submission Logic
+// Contact Form Submission Logic (Proxy Version)
 // ==========================================
 form.addEventListener('submit', function(e) {
   e.preventDefault();
@@ -26,31 +11,30 @@ form.addEventListener('submit', function(e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
 
-  fetch('https://api.web3forms.com/submit', {
+  // REPLACE the URL below with your actual Cloudflare Worker URL
+  fetch('https://your-worker-url.your-subdomain.workers.dev', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: json
   })
   .then(async (response) => {
-    if (response.status == 200) {
+    if (response.ok) {
       result.classList.add('active');
+      form.reset();
     } else {
       console.error("Server response:", response);
-      alert("Submission failed. Check your API key.");
+      alert("Submission failed. Please try again later.");
     }
   })
   .catch(error => {
     console.error("Fetch error:", error);
-  })
-  .then(() => {
-    form.reset();
+    alert("Connection error. Please check your network.");
   });
 });
 
+// ==========================================
 // Close Success Modal Button
+// ==========================================
 document.getElementById('close-status').addEventListener('click', function() {
   result.classList.remove('active');
 });
@@ -61,12 +45,10 @@ document.getElementById('close-status').addEventListener('click', function() {
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-// Toggle menu on click
 menuToggle.addEventListener('click', function() {
   navLinks.classList.toggle('active');
 });
 
-// Close the menu automatically when any navigation link is clicked
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', function() {
     navLinks.classList.remove('active');

@@ -6,13 +6,11 @@ const result = document.getElementById('form-status');
 // ==========================================
 form.addEventListener('submit', function(e) {
   e.preventDefault();
-  
   const formData = new FormData(form);
-  const object = Object.fromEntries(formData);
-  const json = JSON.stringify(object);
+  const json = JSON.stringify(Object.fromEntries(formData));
 
-  // REPLACE the URL below with your actual Cloudflare Worker URL
-  fetch('https://your-worker-url.your-subdomain.workers.dev', {
+  // Update this URL to exactly match your Worker's URL
+  fetch('https://portfolio.jacobt257-4b9.workers.dev/', { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: json
@@ -22,14 +20,10 @@ form.addEventListener('submit', function(e) {
       result.classList.add('active');
       form.reset();
     } else {
-      console.error("Server response:", response);
-      alert("Submission failed. Please try again later.");
+      alert("Submission failed.");
     }
   })
-  .catch(error => {
-    console.error("Fetch error:", error);
-    alert("Connection error. Please check your network.");
-  });
+  .catch(error => console.error("Error:", error));
 });
 
 // ==========================================

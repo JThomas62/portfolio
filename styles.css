@@ -276,19 +276,10 @@ section {
   transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-item:hover img {
-  filter: grayscale(0%) opacity(100%);
-  transform: scale(1.1);
-}
-
 .icon-item span {
   font-size: 0.85rem;
   color: #666;
   transition: 0.25s ease;
-}
-
-.icon-item:hover span {
-  color: #fff;
 }
 
 .projects {

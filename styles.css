@@ -1,7 +1,19 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -23,6 +35,15 @@ p {
 
 section {
   padding: 6rem 0;
+}
+
+/* Accessible Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #76ff03;
+  outline-offset: 3px;
 }
 
 .btn {
@@ -114,7 +135,8 @@ section {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
   background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -161,14 +183,14 @@ section {
 }
 
 .hero-left h1 {
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-size: clamp(2rem, 6vw, 2.4rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
 
 .location {
-  font-size: 1rem;
+  font-size: .85rem;
   color: #76ff03;
   font-weight: 500;
   text-transform: uppercase;
@@ -206,7 +228,7 @@ section {
   max-width: 540px;
   margin: auto;
   color: #a0a0a0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 

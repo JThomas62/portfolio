@@ -8,8 +8,12 @@
   <meta name="description"
     content="Fullstack PERN developer building scalable web applications and high-performance digital solutions.">
   <link rel="icon" type="image/webp" href="./images/JT_Web_Tab.webp">
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -17,7 +21,7 @@
   <header>
     <nav class="navbar" aria-label="Primary">
       <div class="logo">
-        <a href="/"><img src="./images/JT_Web_Logo.webp" alt="Jacob Thomas Logo"></a>
+        <a href="/"><img src="./images/JT_Web_Logo.webp" alt="Jacob Thomas Logo" width="100" height="25" fetchpriority="high"></a>
       </div>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
@@ -36,6 +40,7 @@
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-grid">
@@ -46,13 +51,9 @@
             <div class="hero-buttons">
               <a href="#contact" class="btn btn-primary">Get In Touch</a>
             </div>
-
             <div class="hero-socials">
-              <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
-                <img src="images/github.webp" alt="GitHub">
-              </a>
               <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
-                <img src="images/linkedin.webp" alt="LinkedIn">
+                <img src="images/linkedin.webp" alt="LinkedIn" width="24" height="24">
               </a>
             </div>
           </div>
@@ -64,12 +65,15 @@
               to streamline operations, I deliver clean, high-performance digital solutions.
             </p>
           </div>
+        </div>
+      </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
         <div class="about-main">
-          <img src="images/headshot.webp" alt="Jacob Thomas" class="headshot-img">
+          <img src="images/headshot.webp" alt="Jacob Thomas" class="headshot-img" width="280" height="280" loading="lazy">
 
           <div class="about-text">
             <p>
@@ -89,63 +93,61 @@
           <div class="stack-group">
             <h3>Frontend</h3>
             <div class="icon-grid">
-              <div class="icon-item"><img src="images/html.webp" alt="HTML"><span>HTML</span></div>
-              <div class="icon-item"><img src="images/css.webp" alt="CSS"><span>CSS</span></div>
-              <div class="icon-item"><img src="images/javascript.webp" alt="JS"><span>JavaScript</span></div>
-              <div class="icon-item"><img src="images/react.webp" alt="React"><span>React</span></div>
+              <div class="icon-item"><img src="images/html.webp" alt="HTML" width="44" height="44" loading="lazy"><span>HTML</span></div>
+              <div class="icon-item"><img src="images/css.webp" alt="CSS" width="44" height="44" loading="lazy"><span>CSS</span></div>
+              <div class="icon-item"><img src="images/javascript.webp" alt="JS" width="44" height="44" loading="lazy"><span>JavaScript</span></div>
+              <div class="icon-item"><img src="images/react.webp" alt="React" width="44" height="44" loading="lazy"><span>React</span></div>
             </div>
           </div>
 
           <div class="stack-group">
             <h3>Backend</h3>
             <div class="icon-grid">
-              <div class="icon-item"><img src="images/nodejs.webp" alt="Node"><span>Node.js</span></div>
-              <div class="icon-item"><img src="images/express.webp" alt="Express"><span>Express</span></div>
-              <div class="icon-item"><img src="images/postgresql.webp" alt="Postgres"><span>PostgreSQL</span></div>
+              <div class="icon-item"><img src="images/nodejs.webp" alt="Node" width="44" height="44" loading="lazy"><span>Node.js</span></div>
+              <div class="icon-item"><img src="images/express.webp" alt="Express" width="44" height="44" loading="lazy"><span>Express</span></div>
+              <div class="icon-item"><img src="images/postgresql.webp" alt="Postgres" width="44" height="44" loading="lazy"><span>PostgreSQL</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Work Section -->
     <section class="work-section" id="work">
       <div class="container">
         <div class="projects">
 
           <article class="project-card">
-            <img src="images/test.jpg" alt="Enterprise CRM dashboard preview">
+            <img src="images/test.jpg" alt="Enterprise CRM dashboard preview" width="600" height="200" loading="lazy">
             <div class="card-container">
               <h3>Enterprise CRM Solution</h3>
               <p class="project-description">Developed a custom dashboard using React and Node.js to streamline internal
                 workflows, reducing task completion time by 25%.</p>
               <div class="project-links">
-                <a href="#" class="btn btn-secondary">GitHub</a>
                 <a href="#" class="btn btn-primary">Live Demo</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <img src="images/test.jpg" alt="E-commerce API architecture diagram preview">
+            <img src="images/test.jpg" alt="E-commerce API architecture diagram preview" width="600" height="200" loading="lazy">
             <div class="card-container">
               <h3>E-commerce API Engine</h3>
               <p class="project-description">Built a robust PostgreSQL-backed API designed to handle high-concurrency
                 traffic and secure payment integrations.</p>
               <div class="project-links">
-                <a href="#" class="btn btn-secondary">GitHub</a>
                 <a href="#" class="btn btn-primary">Live Demo</a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
-            <img src="images/test.jpg" alt="Real-time analytics platform user interface preview">
+            <img src="images/test.jpg" alt="Real-time analytics platform user interface preview" width="600" height="200" loading="lazy">
             <div class="card-container">
               <h3>Real-time Analytics App</h3>
               <p class="project-description">A PERN stack application featuring live data visualization and secure user
                 authentication protocols.</p>
               <div class="project-links">
-                <a href="#" class="btn btn-secondary">GitHub</a>
                 <a href="#" class="btn btn-primary">Live Demo</a>
               </div>
             </div>
@@ -155,6 +157,7 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
         <form id="contact-form">

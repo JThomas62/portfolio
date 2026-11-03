@@ -34,7 +34,8 @@ form.addEventListener('submit', function(e) {
 // ==========================================
 // Close Success Modal Button
 // ==========================================
-document.getElementById('close-status').addEventListener('click', function() {
+const closeStatusBtn = document.getElementById('close-status');
+closeStatusBtn.addEventListener('click', function() {
   result.classList.remove('active');
   result.setAttribute('aria-hidden', 'true');
   this.blur(); 
@@ -46,6 +47,11 @@ document.getElementById('close-status').addEventListener('click', function() {
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+function closeMobileMenu() {
+  navLinks.classList.remove('active');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}
+
 menuToggle.addEventListener('click', function() {
   const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
   menuToggle.setAttribute('aria-expanded', !isExpanded);
@@ -53,8 +59,18 @@ menuToggle.addEventListener('click', function() {
 });
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', function() {
-    navLinks.classList.remove('active');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeMobileMenu);
+});
+
+// Close mobile menu on pressing the Escape key (Accessibility upgrade)
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (result.classList.contains('active')) {
+      result.classList.remove('active');
+      result.setAttribute('aria-hidden', 'true');
+    }
+    if (navLinks.classList.contains('active')) {
+      closeMobileMenu();
+    }
+  }
 });

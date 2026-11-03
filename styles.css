@@ -157,6 +157,17 @@ textarea:focus-visible {
   color: #76ff03;
 }
 
+/* Navbar Button Specific Styling */
+.nav-links .nav-btn {
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.nav-links .nav-btn:hover {
+  color: #000;
+}
+
 .nav-links.active a.active-section {
   color: #a0a0a0; 
 }
@@ -455,7 +466,7 @@ textarea:focus-visible {
 
 footer {
   text-align: center;
-  padding: 4rem 0;
+  padding: 2rem 0;
   border-top: 1px solid #1a1a1a;
   color: #444;
   font-size: 0.9rem;
@@ -473,6 +484,7 @@ footer {
   .nav-links {
     display: flex;
     gap: 2rem;
+    align-items: center;
     position: static;
     width: auto;
     height: auto;
@@ -487,7 +499,8 @@ footer {
     font-size: 1rem;
   }
 
-  .nav-links a::after {
+  /* Exclude the .nav-btn from having the bottom underline effect */
+  .nav-links a:not(.nav-btn)::after {
     content: '';
     position: absolute;
     width: 0;
@@ -498,12 +511,12 @@ footer {
     transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .nav-links a:hover::after,
-  .nav-links a.active-section::after {
+  .nav-links a:not(.nav-btn):hover::after,
+  .nav-links a.active-section:not(.nav-btn)::after {
     width: 100%;
   }
 
-  .nav-links a.active-section {
+  .nav-links a.active-section:not(.nav-btn) {
     color: #76ff03 !important;
   }
 
